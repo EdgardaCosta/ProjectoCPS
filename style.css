@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+/* Estilo do body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, white 10%, #86C55F);
+    background-attachment: fixed;
+    justify-content: center;
+    background-color: #f4f4f4;
+    text-align: justify;
+}
+
+/* Estilo da imagem */
+img {
+    width: 400px;
+    height: auto;
+}
+
+/* Centralizar dinamicamente */
+.container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    min-height: 100vh;
+    /* Altura mínima de 100% da viewport */
+    background-color: #f4f4f9;
+    /* Fundo da página */
+    margin: 0;
+}
+
+/* Centralizar a caixa */
+.center-box {
+    max-width: 700px;
+    margin: 5px auto;
+    /* Centraliza horizontalmente */
+    padding: 20px;
+    background: #045B3B;
+    /* Cor de fundo */
+    border: 1px solid #ddd;
+    /* Borda fina */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    color: white;
+}
+
+
+/* Estilo do menu */
+.menu {
+    background-color: #86C55F;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: #FA9B1B;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Tornar o menu responsivo */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        margin: 5px 0;
+    }
+}
+
+/* Estilo do botão */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #86C55F;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+abbr {
+    text-decoration: underline;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+a {
+    color: white;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+abbr:hover {
+    color: white;
+    background: linear-gradient(to right, #FA9B1B, transparent);
+    border-radius: 5px;
+    display: inline-block; /* Necessário para aplicar border-radius */
+}
