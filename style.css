@@ -9,6 +9,7 @@ body {
     justify-content: center;
     background-color: #f4f4f4;
     text-align: justify;
+    line-height: 1.8em;
 }
 
 /* Estilo da imagem */
@@ -84,6 +85,7 @@ img {
     }
 }
 
+
 /* Estilo do botão */
 button {
     padding: 10px 20px;
@@ -112,5 +114,6 @@ abbr:hover {
     color: white;
     background: linear-gradient(to right, #FA9B1B, transparent);
     border-radius: 5px;
-    display: inline-block; /* Necessário para aplicar border-radius */
+    display: inline-block;
+    /* Necessário para aplicar border-radius */
 }
