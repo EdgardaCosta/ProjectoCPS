@@ -34,7 +34,8 @@ img {
 
 /* Centralizar a caixa */
 .center-box {
-    max-width: 700px;
+    max-width: 850px;
+    min-width: 400px;
     margin: 5px auto;
     /* Centraliza horizontalmente */
     padding: 20px;
@@ -55,7 +56,6 @@ img {
     background-color: #86C55F;
     display: flex;
     justify-content: center;
-    padding: 10px;
 }
 
 .menu a {
