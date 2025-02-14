@@ -12,6 +12,11 @@ body {
     line-height: 1.8em;
 }
 
+h2 {
+    background: linear-gradient(to right, #FA9B1B, transparent);
+    display: inline-block;
+}
+
 /* Estilo da imagem */
 img {
     width: 400px;
