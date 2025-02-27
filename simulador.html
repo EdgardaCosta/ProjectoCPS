@@ -9,7 +9,6 @@
     <link rel="short icon" href="img/KIXIicon_kixi_150x-removebg-preview.png">
 
     <style>
-        
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -134,21 +133,31 @@
                 return;
             }
 
-            const juros = 5.33 / 100;
-            const taxaImprevisto = 1.50 / 100;
+            const juros = 6.25 / 100;
+            const taxaImprevisto = 1 / 100;
             const taxaProcessamento = 6.50 / 100;
             const iva = 14 / 100;
 
             const valorBase = currentSalary * desiredSalaries;
-            const totalTaxas = valorBase * (juros + taxaImprevisto + taxaProcessamento);
-            const valorComIva = totalTaxas * (1 + iva);
-            const valorReceber = valorBase - valorComIva;
+            const taxasIn = taxaImprevisto + taxaProcessamento;
+            const totalTaxas = valorBase * taxasIn; // Aplicação das taxas diretas ao valor base
+            const taxaIva = totalTaxas * iva; // Aplicação do IVA sobre o total das taxas
+            const totalTaxasComIva = totalTaxas + taxaIva; // Soma das taxas com IVA
 
-            const valorPagarMensal = (valorBase + totalTaxas) / paymentTime;
+            const valorReceber = valorBase - totalTaxasComIva; // Valor que será efetivamente recebido
+
+            const jurosIn = valorBase * juros * paymentTime; // Juros aplicados ao longo do tempo
+            const valorTotalPagar = valorBase + jurosIn; // Total que será pago ao longo do período
+
+            const valorPagarMensal = valorTotalPagar / paymentTime; // Prestação mensal
 
             document.getElementById('amountReceived').textContent = formatCurrency(valorReceber);
             document.getElementById('monthlyPayment').textContent = formatCurrency(valorPagarMensal);
         }
+
+        document.getElementById('amountReceived').textContent = formatCurrency(valorReceber);
+        document.getElementById('monthlyPayment').textContent = formatCurrency(valorPagarMensal);
+        
     </script>
 
 </body>
